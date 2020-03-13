@@ -1,0 +1,267 @@
+@import './variables';
+
+$xs-screen: 480px;
+$sm-screen: 720px;
+$md-screen: 980px;
+$lg-screen: 1366px;
+$xl-screen: 1920px;
+
+@mixin xs-mobile {
+  @media (max-width: #{$xs-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin xs-mobile-markets {
+  @media (max-width: #{$xs-screen + 142px}) {
+    @content;
+  }
+}
+
+@mixin xs-mobile-filter-dates {
+  @media (max-width: #{$sm-screen - 0.1px}), (max-height: #{$xs-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$sm-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$md-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: #{$lg-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin laptop-markets {
+  @media (max-width: #{$lg-screen + 200px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$xl-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@mixin mobile-hidden {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+@mixin laptop-hidden {
+  @include laptop {
+    display: none !important;
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+@mixin transition($property) {
+  transition: $property 0.4s;
+}
+
+@mixin visibilityHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin visibilityVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin chevron {
+  font-size: 7px;
+  margin-left: 10px;
+}
+
+@mixin btn-reset-default {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+@mixin link-reset-default {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@mixin page-padding {
+  padding-left: $page-padding;
+  padding-right: $page-padding;
+  @include tablet {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  @include xs-mobile {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+@mixin form-control {
+  &_invalid {
+    @include form-control-invalid;
+  }
+
+  input {
+    border-radius: $input-border-radius;
+    height: $input-height;
+    width: $input-width;
+    font-size: $font-size-large;
+    padding-left: $input-padding-left;
+    transition: all ease $transition-time;
+    @include apply-theme('&') {
+      background-color: egt-theme(palettes, white);
+      border: $input-border-size solid egt-theme(palettes, black-opacity-20);
+      color: egt-theme(palettes, black-opacity-80);
+    }
+
+    &::placeholder {
+      transition: all ease $transition-time;
+      font-weight: inherit;
+      opacity: 1;
+      @include apply-theme('&') {
+        color: egt-theme(palettes, black-opacity-40);
+      }
+    }
+
+    &::-webkit-caps-lock-indicator {
+      display: none !important;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    &::-webkit-credentials-auto-fill-button {
+      visibility: hidden;
+      display: none !important;
+      pointer-events: none;
+    }
+
+    &:hover {
+      @include apply-theme('&') {
+        border-color: egt-theme(palettes, black-opacity-40);
+      }
+
+      &::placeholder {
+        @include apply-theme('&') {
+          color: egt-theme(palettes, black-opacity-60);
+        }
+      }
+    }
+
+    &:focus {
+      @include apply-theme('&') {
+        border-color: egt-theme(palettes, tertiary-40);
+      }
+
+      &::placeholder {
+        @include apply-theme('&') {
+          color: egt-theme(palettes, black-opacity-80);
+        }
+      }
+    }
+
+    &[disabled] {
+      pointer-events: none;
+      @include apply-theme('&') {
+        color: egt-theme(global, disabled-font-color);
+        border-color: egt-theme(global, disabled-border-color);
+        background-color: egt-theme(global, disabled-bg-color);
+      }
+    }
+  }
+}
+
+@mixin form-control-invalid {
+  input {
+    @include apply-theme('&') {
+      background-color: egt-theme(palettes, white) !important;
+      border-color: egt-theme(palettes, error-50) !important;
+    }
+  }
+}
+
+@mixin form-control-warning {
+  input {
+    @include apply-theme('&') {
+      background-color: egt-theme(palettes, white) !important;
+      border-color: egt-theme(palettes, secondary-30) !important;
+    }
+  }
+}
+
+@mixin text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin form-control-success {
+  input {
+    @include apply-theme('&') {
+      border-color: egt-theme(palettes, success-50) !important;
+    }
+  }
+}
+
+@mixin sportsbook-layout-btn {
+  font-size: 20px;
+  width: 22px;
+  height: 22px;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  @include apply-theme('&') {
+    color: egt-theme(palettes, white-opacity-30);
+  }
+}
+
+@mixin registration-form-ro-icon-size {
+  top: 6px;
+  left: 6px;
+  font-size: 24px;
+}

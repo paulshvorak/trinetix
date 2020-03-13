@@ -1,0 +1,10 @@
+@import 'theming';
+@import 'themes/default';
+
+@import 'variables';
+@import 'mixins';
+
+@function get-color($component, $color) {
+  @warn "get-color deprecated! Use egt-theme and aplly-theme mixin";
+  @return egt-theme($component, $color, default-dark);
+}
