@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Decima Nova Pro';
+    src: url('DecimaNovaPro-Bold.eot');
+    src: url('DecimaNovaPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('DecimaNovaPro-Bold.woff2') format('woff2'),
+        url('DecimaNovaPro-Bold.woff') format('woff'),
+        url('DecimaNovaPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Decima Nova Pro Lt';
+    src: url('DecimaNovaProLt.eot');
+    src: url('DecimaNovaProLt.eot?#iefix') format('embedded-opentype'),
+        url('DecimaNovaProLt.woff2') format('woff2'),
+        url('DecimaNovaProLt.woff') format('woff'),
+        url('DecimaNovaProLt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Decima Nova Pro';
+    src: url('DecimaNovaPro.eot');
+    src: url('DecimaNovaPro.eot?#iefix') format('embedded-opentype'),
+        url('DecimaNovaPro.woff2') format('woff2'),
+        url('DecimaNovaPro.woff') format('woff'),
+        url('DecimaNovaPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

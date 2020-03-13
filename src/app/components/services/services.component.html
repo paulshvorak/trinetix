@@ -1,0 +1,13 @@
+<section class="services">
+  <div class="services__top">
+    <div class="container">
+      <h2 class="services__title">What We Do</h2>
+      <div class="services__description">We launch different types of platforms and operating systems using distinguishes of every platform or operating system as adventage and a powerful tool.</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="services__list">
+      <app-services-item [servicesItem]="item" *ngFor="let item of services"></app-services-item>
+    </div>
+  </div>
+</section>

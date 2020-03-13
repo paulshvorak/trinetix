@@ -1,0 +1,23 @@
+@import '../../../styles/core/core';
+
+.contact-us {
+  padding: 60px 0;
+  text-align: center;
+  @include tablet {
+    padding: 38px 0 40px;
+  }
+  &__description {
+    margin: 0 0 40px;
+    &-phrase {
+      font-size: $font-size-title;
+      color: #105788;
+      @include tablet {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+  &__btn {
+    font-family: 'Decima Nova Pro Lt';
+  }
+}

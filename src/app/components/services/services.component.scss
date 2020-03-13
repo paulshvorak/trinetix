@@ -1,0 +1,45 @@
+@import '../../../styles/core/core';
+
+.services {
+  position: relative;
+  border-bottom: 1px solid #e1e1e1;
+  &__top {
+    padding: 60px 0;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center;
+    @include tablet {
+      padding: 30px 0 40px;
+    }
+  }
+  &__title {
+    margin: 0 0 40px;
+    font-size: $font-size-large-title;
+    font-weight: $font-weight-regular;
+    color: #105788;
+    @include tablet {
+      margin: 0 0 24px;
+      font-size: 34px;
+    }
+  }
+  &__description {
+    max-width: 890px;
+    margin: 0 auto;
+    font-size: $font-size-medium-large;
+    line-height: 38px;
+    font-family: 'Decima Nova Pro Lt';
+    @include tablet {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 123px 0 0;
+    @include tablet {
+      display: block;
+      padding: 69px 0 0;
+    }
+  }
+}

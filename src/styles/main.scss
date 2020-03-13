@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,300i,400,400i,500,700,900&subset=cyrillic');
 
-@import 'core';
+@import 'core/variables';
+@import 'core/mixins';
 @import 'resets/normalize';
-@import 'core/base';
-@import 'swiper';

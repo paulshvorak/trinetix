@@ -1,0 +1,69 @@
+@import '../../../styles/core/core';
+
+.banner {
+  padding: 130px 0 0;
+  background-color: $secondary;
+  @include tablet {
+    padding: 67px 0 0;
+  }
+  &__title {
+    max-width: 950px;
+    margin: 0 0 60px;
+    font-size: $font-size-title;
+    line-height: 58px;
+    font-weight: $font-weight-regular;
+    color: $white;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__services {
+    border-top: 1px solid rgba(0, 53, 98, 0.4);
+    @include tablet {
+      overflow-x: auto;
+    }
+    @include tablet {
+      border-top: none;
+    }
+    &-inner {
+      display: flex;
+    }
+    &-item {
+      position: relative;
+      padding: 20px 24px;
+      text-transform: uppercase;
+      font-family: 'Decima Nova Pro';
+      font-weight: bold;
+      color: $white;
+      cursor: pointer;
+      @include laptop {
+        padding: 20px;
+      }
+      @include tablet {
+        white-space: nowrap;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $primary;
+        transform: scale(0);
+        transition: $transition-time ease;
+      }
+      &--active {
+        color: $primary;
+        &:after {
+          transform: scale(1);
+        }
+      }
+      &:hover {
+        &:after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

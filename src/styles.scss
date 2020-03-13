@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Decima Nova Pro';
+  src: url('assets/fonts/DecimaNovaPro-Bold.eot');
+  src: url('assets/fonts/DecimaNovaPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/DecimaNovaPro-Bold.woff2') format('woff2'),
+  url('assets/fonts/DecimaNovaPro-Bold.woff') format('woff'),
+  url('assets/fonts/DecimaNovaPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Decima Nova Pro Lt';
+  src: url('assets/fonts/DecimaNovaProLt.eot');
+  src: url('assets/fonts/DecimaNovaProLt.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/DecimaNovaProLt.woff2') format('woff2'),
+  url('assets/fonts/DecimaNovaProLt.woff') format('woff'),
+  url('assets/fonts/DecimaNovaProLt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Decima Nova Pro';
+  src: url('assets/fonts/DecimaNovaPro.eot');
+  src: url('assets/fonts/DecimaNovaPro.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/DecimaNovaPro.woff2') format('woff2'),
+  url('assets/fonts/DecimaNovaPro.woff') format('woff'),
+  url('assets/fonts/DecimaNovaPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+
+@import 'styles/main';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'PT Serif', serif;
+}
+
+.page-content {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include mobile {
+    padding: 0 14px;
+  }
+}
+
+.btn {
+  min-width: 176px;
+  padding: 8px 6px 10px;
+  background-color: transparent;
+  font-size: $font-size-base;
+  border: 1px solid $primary;
+  border-radius: 32px;
+  color: $primary;
+  transition: $transition-time ease;
+  &:hover {
+    border-color: lighten($primary, 10%);
+  }
+  &:active {
+    border-color: lighten($primary, 10%);
+  }
+  &--filled {
+    background-color: $primary;
+    color: $white;
+    &:hover {
+      background-color: lighten($primary, 10%);
+    }
+    &:active {
+      background-color: darken($primary, 10%);
+    }
+  }
+  &--white {
+    border-color: $white;
+    color: $white;
+    &:hover {
+      border-color: darken($white, 10%);
+    }
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--sm {
+    min-width: 120px;
+  }
+  &--lg {
+    min-width: 280px;
+    padding: 10px 6px 11px;
+    font-size: $font-size-large;
+  }
+}

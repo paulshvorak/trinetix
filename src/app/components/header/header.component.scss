@@ -1,0 +1,61 @@
+@import '../../../styles/core/core';
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 0;
+  border-top: 4px solid $primary;
+  border-bottom: 1px solid rgba(0, 53, 98, 0.3);
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: block;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__nav {
+    display: flex;
+    margin-right: 44px;
+    &-item {
+      text-transform: uppercase;
+      font-family: 'Decima Nova Pro';
+      font-weight: bold;
+      color: $white;
+      text-decoration: none;
+      transition: $transition-time ease;
+      &:not(:last-child) {
+        margin-right: 44px;
+      }
+      &--active, &:hover {
+        color: $primary;
+      }
+    }
+  }
+  &__btn-contact {
+    padding: 7px 6px;
+    font-size: $font-size-small;
+    font-family: 'Decima Nova Pro';
+    font-weight: bold;
+  }
+  &__menu {
+    display: none;
+    cursor: pointer;
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    @include tablet {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<div class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__top-inner">
+        <div class="footer__column">
+          <div class="footer__column-item">Headquarters:</div>
+          <div class="footer__column-item">11 E. Chavdar Street, Office 222,</div>
+          <div class="footer__column-item">Kiev, Ukraine 04335</div>
+        </div>
+        <div class="footer__column">
+          <div class="footer__column-item">USA:</div>
+          <div class="footer__column-item">usa.hr@trinetix.com</div>
+          <div class="footer__column-item">+1 212-336-1440</div>
+        </div>
+        <div class="footer__column">
+          <div class="footer__column-item">Ukraine:</div>
+          <div class="footer__column-item">ua.hr@trinetix.com</div>
+          <div class="footer__column-item">+38 044-334-2341</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <div class="footer__copyright">© 2010-2015 Trinetix LLC</div>
+        <nav class="footer__nav">
+          <a href="#" class="footer__nav-item">Home</a>
+          <a href="#" class="footer__nav-item">Case Studies</a>
+          <a href="#" class="footer__nav-item footer__nav-item--active">Services</a>
+          <a href="#" class="footer__nav-item">Expertise</a>
+          <a href="#" class="footer__nav-item">About</a>
+          <a href="#" class="footer__nav-item">Contact Us</a>
+        </nav>
+        <ul class="footer__socials">
+          <li *ngFor="let item of socials" class="footer__socials-item">
+            <a href="{{ item.href }}" class="footer__socials-item-link">
+              <img src="{{ item.src }}" alt="{{ item.alt }}">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

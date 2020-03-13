@@ -1,0 +1,64 @@
+@import '../../../styles/core/core';
+
+:host-context(.services__list) {
+  width: 50%;
+  @include tablet {
+    width: 100%;
+  }
+  &:nth-child(2) {
+    padding-top: 47px;
+  }
+  &:nth-child(4) {
+    padding-top: 36px;
+  }
+  &:last-child {
+    margin-top: 110px;
+    @include laptop {
+      margin-top: 90px;
+    }
+  }
+}
+
+:host {
+  display: block;
+}
+
+.services-item {
+  margin: 0 0 60px;
+  padding: 0 32px;
+  text-align: center;
+  @include laptop {
+    padding: 0 20px;
+  }
+  &__img {
+    display: block;
+    margin: 0 auto 32px;
+    max-width: 100%;
+    @include tablet {
+      margin: 0 auto 25px;
+    }
+  }
+  &__title {
+    margin: 0 0 20px;
+    font-size: $font-size-extra-large;
+    font-weight: $font-weight-regular;
+    color: $primary;
+    @include tablet {
+      margin: 0 0 15px;
+      font-size: 28px;
+    }
+  }
+  &__description {
+    margin: 0 0 20px;
+    font-size: $font-size-large;
+    line-height: 34px;
+    font-family: 'Decima Nova Pro Lt';
+    @include tablet {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  &__btn {
+    font-family: 'Decima Nova Pro Lt';
+  }
+}

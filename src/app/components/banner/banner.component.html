@@ -1,0 +1,14 @@
+<section class="banner">
+  <div class="container">
+    <h1 class="banner__title">We work with forward businesses to create new digital platforms, products and services.</h1>
+  </div>
+  <div class="banner__services">
+    <div class="container">
+      <div class="banner__services-inner">
+        <div class="banner__services-item banner__services-item--active">all</div>
+        <div *ngFor="let item of services" class="banner__services-item">{{ item.title }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
